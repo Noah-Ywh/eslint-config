@@ -1,0 +1,50 @@
+{
+  "name": "@noahyu/eslint-config-vue",
+  "version": "0.0.0",
+  "description": "ESlint config for Vue 3 + TypeScript",
+  "main": "./dist/index.js",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsc -w",
+    "changelog": "conventional-changelog -n '../../changelog.config.js' -i CHANGELOG.md -s -r 0 -k ./package.json --commit-path ./"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "eslint-config-vue"
+  ],
+  "author": "Noah Yu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noah-Ywh/eslint-config.git",
+    "directory": "packages/eslint-config-vue"
+  },
+  "homepage": "https://paint-js.com/docs/eslint-config",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=7"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.33.0",
+    "prettier": ">=2.8.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.9.0",
+    "prettier": "^2.8.3",
+    "vue-eslint-parser": "^9.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

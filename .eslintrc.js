@@ -1,0 +1,38 @@
+module.exports = {
+  env: {
+    node: true,
+    es2022: true,
+  },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    sourceType: 'module',
+  },
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+    'eslint:recommended',
+    'prettier',
+  ],
+  plugins: ['@typescript-eslint'],
+  rules: {
+    indent: ['error', 2],
+    'linebreak-style': ['error', 'unix'],
+    quotes: ['error', 'single'],
+    semi: ['error', 'never'],
+    camelcase: 'error',
+    'no-template-curly-in-string': 'warn',
+    'accessor-pairs': 'warn',
+    'consistent-return': 'warn',
+    curly: 'error',
+    'default-case': 'error',
+    'dot-location': ['error', 'property'],
+    eqeqeq: 'error',
+    'no-alert': 'warn',
+    'no-else-return': 'warn',
+    'no-empty-function': 'warn',
+    'no-empty-pattern': 'warn',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
+  },
+}
