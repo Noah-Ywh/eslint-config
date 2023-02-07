@@ -38,6 +38,12 @@ export = {
     'no-unused-vars': 'off',
     'no-console': 'off',
     'no-undef': 'off',
+    camelcase: [
+      'error',
+      {
+        properties: 'never',
+      },
+    ],
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
   },

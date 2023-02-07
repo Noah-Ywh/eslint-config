@@ -35,6 +35,12 @@ export = {
     'no-empty-function': 'off',
     'no-empty-pattern': 'warn',
     'no-unused-vars': 'off',
+    camelcase: [
+      'error',
+      {
+        properties: 'never',
+      },
+    ],
     '@typescript-eslint/no-explicit-any': 'off',
   },
 }
