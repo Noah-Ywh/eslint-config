@@ -1,3 +1,5 @@
+import { cwd } from 'node:process'
+
 export = {
   env: {
     node: true,
@@ -7,7 +9,7 @@ export = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: 'tsconfig.json',
-    tsconfigRootDir: __dirname,
+    tsconfigRootDir: cwd(),
     sourceType: 'module',
   },
   extends: [
