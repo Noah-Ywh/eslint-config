@@ -1,3 +1,9 @@
+## [1.2.1](https://github.com/Noah-Ywh/eslint-config/compare/v1.2.0...v1.2.1) (2023-06-19)
+
+### 🐛Bug Fixes
+
+- **nest:** 为 tsconfig.json 设置正确的根目录路径 ([00a40f1](https://github.com/Noah-Ywh/eslint-config/commit/00a40f1ff74edf6d10ef389a2e7a96472966457f))
+
 # [1.2.0](https://github.com/Noah-Ywh/eslint-config/compare/v1.1.0...v1.2.0) (2023-06-19)
 
 ### ✨Features
