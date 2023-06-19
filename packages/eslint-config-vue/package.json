@@ -1,6 +1,6 @@
 {
   "name": "@noahyu/eslint-config-vue",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "ESlint config for Vue 3 + TypeScript",
   "main": "./dist/index.js",
   "files": [
