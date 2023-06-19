@@ -1,3 +1,9 @@
+# [1.2.0](https://github.com/Noah-Ywh/eslint-config/compare/v1.1.0...v1.2.0) (2023-06-19)
+
+### ✨Features
+
+- **nest:** update ([02c1bba](https://github.com/Noah-Ywh/eslint-config/commit/02c1bbafc91cb234816f8b9f9609c05621231791))
+
 # [1.1.0](https://github.com/Noah-Ywh/eslint-config/compare/v1.0.0...v1.1.0) (2023-02-07)
 
 ### ✨Features
