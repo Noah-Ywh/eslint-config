@@ -1,3 +1,9 @@
+## [1.2.3](https://github.com/Noah-Ywh/eslint-config/compare/v1.2.2...v1.2.3) (2023-07-14)
+
+### 🛠️Chore
+
+- update deps ([c99e64f](https://github.com/Noah-Ywh/eslint-config/commit/c99e64f91717c0933433915a3ad765c81b187de0))
+
 ## [1.2.2](https://github.com/Noah-Ywh/eslint-config/compare/v1.2.1...v1.2.2) (2023-06-19)
 
 ### 🛠️Chore
