@@ -1,11 +1,34 @@
 'use strict'
-const Q = require('q')
+
 const compareFunc = require('compare-func')
 
-const conventionalChangelog = require('conventional-changelog-angular/conventional-changelog')
-const parserOpts = require('conventional-changelog-angular/parser-opts')
-const recommendedBumpOpts = require('conventional-changelog-angular/conventional-recommended-bump')
-const writerOpts = require('conventional-changelog-angular/writer-opts')
+const { createParserOpts } = require('conventional-changelog-angular/parserOpts')
+const { createWriterOpts } = require('conventional-changelog-angular/writerOpts')
+const {
+  createConventionalChangelogOpts,
+} = require('conventional-changelog-angular/conventionalChangelog')
+const {
+  createConventionalRecommendedBumpOpts,
+} = require('conventional-changelog-angular/conventionalRecommendedBump')
+
+async function createPreset() {
+  const parserOpts = createParserOpts()
+  const writerOpts = await createWriterOpts()
+  const conventionalChangelog = createConventionalChangelogOpts(parserOpts, writerOpts)
+  const recommendedBumpOpts = createConventionalRecommendedBumpOpts(parserOpts)
+
+  writerOpts.transform = getWriterOpts().transform
+  writerOpts.commitGroupsSort = getWriterOpts().commitGroupsSort
+
+  return {
+    parserOpts,
+    writerOpts,
+    conventionalChangelog,
+    recommendedBumpOpts,
+  }
+}
+
+module.exports = createPreset
 
 function getWriterOpts() {
   return {
@@ -60,12 +83,14 @@ function getWriterOpts() {
           : context.repoUrl
         if (url) {
           url = `${url}/issues/`
+          // Issue URLs.
           commit.subject = commit.subject.replace(/#([0-9]+)/g, (_, issue) => {
             issues.push(issue)
             return `[#${issue}](${url}${issue})`
           })
         }
         if (context.host) {
+          // User URLs.
           commit.subject = commit.subject.replace(
             /\B@([a-z0-9](?:-?[a-z0-9/]){0,38})/g,
             (_, username) => {
@@ -74,10 +99,12 @@ function getWriterOpts() {
               }
 
               return `[@${username}](${context.host}/${username})`
-            }
+            },
           )
         }
       }
+
+      // remove references that already appear in the subject
       commit.references = commit.references.filter((reference) => {
         if (issues.indexOf(reference.issue) === -1) {
           return true
@@ -125,15 +152,3 @@ function getWriterOpts() {
     notesSort: compareFunc,
   }
 }
-
-module.exports = Q.all([conventionalChangelog, parserOpts, recommendedBumpOpts, writerOpts]).spread(
-  (conventionalChangelog, parserOpts, recommendedBumpOpts, writerOpts) => {
-    writerOpts.transform = getWriterOpts().transform
-    writerOpts.groupBy = getWriterOpts().groupBy
-    writerOpts.commitGroupsSort = getWriterOpts().commitGroupsSort
-    writerOpts.commitsSort = getWriterOpts().commitsSort
-    writerOpts.noteGroupsSort = getWriterOpts().noteGroupsSort
-    writerOpts.notesSort = getWriterOpts().notesSort
-    return { conventionalChangelog, parserOpts, recommendedBumpOpts, writerOpts }
-  }
-)

@@ -48,4 +48,4 @@ module.exports = {
 
 [MIT](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2023-present, Wenhao (Noah) Yu
+Copyright (c) 2023-present, Noah Yu
