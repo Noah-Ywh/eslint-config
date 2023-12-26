@@ -15,14 +15,11 @@ export = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
     'plugin:prettier/recommended',
     'prettier',
   ],
-  plugins: ['import', '@typescript-eslint'],
+  plugins: ['@typescript-eslint'],
   rules: {
-    'import/order': 'error',
     indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
@@ -51,4 +48,5 @@ export = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
+  ignorePatterns: ['.eslintrc.js'],
 }
