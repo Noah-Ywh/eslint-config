@@ -1,3 +1,14 @@
+## [1.2.4](https://github.com/Noah-Ywh/eslint-config/compare/v1.2.3...v1.2.4) (2023-12-26)
+
+### 🐛Bug Fixes
+
+- **nest:** 修复 ts 配置文件找不到 `.eslintrc.js` 的错误 ([058377a](https://github.com/Noah-Ywh/eslint-config/commit/058377a594104f6efef112cc1928696e9a32c724))
+
+### 🛠️Chore
+
+- update ([636f62c](https://github.com/Noah-Ywh/eslint-config/commit/636f62c0394446c2a020ef46469c8376d9991753))
+- update deps ([77fab6a](https://github.com/Noah-Ywh/eslint-config/commit/77fab6a8fcbce63bba473b7046d75f1aa5229b59))
+
 ## [1.2.3](https://github.com/Noah-Ywh/eslint-config/compare/v1.2.2...v1.2.3) (2023-07-14)
 
 ### 🛠️Chore
