@@ -3,7 +3,7 @@ import { cwd } from 'node:process'
 export = {
   env: {
     node: true,
-    es2022: true,
+    es2024: true,
     jest: true,
   },
   parser: '@typescript-eslint/parser',

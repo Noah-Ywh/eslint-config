@@ -2,7 +2,7 @@ export = {
   env: {
     browser: true,
     node: true,
-    es2022: true,
+    es2024: true,
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
