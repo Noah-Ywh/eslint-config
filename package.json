@@ -6,7 +6,7 @@
     "preinstall": "npx only-allow pnpm",
     "build": "pnpm -r --parallel build",
     "changelogs": "pnpm -r --parallel changelog && pnpm prettier",
-    "changelog": "conventional-changelog -n './changelog.config.js' -i CHANGELOG.md -s -r 0 -k ./package/eslint-config-vue/package.json --commit-path ./",
+    "changelog": "conventional-changelog -n './changelog.config.js' -i CHANGELOG.md -s -r 0 -k ./packages/eslint-config-vue/package.json --commit-path ./",
     "prettier": "prettier --config .prettierrc --write ./**/*.md",
     "lint": "eslint . --ext .ts --fix",
     "prepare": "husky install"
