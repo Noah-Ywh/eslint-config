@@ -21,12 +21,18 @@ pnpm add @noahyu/eslint-config-vue
 ```
 
 ```js
-// .eslintrc.js
-module.exports = {
-  root: true,
-  extends: ['@noahyu/vue'],
-  // ···
-}
+// eslint.config.mjs
+import noahyuConfig from '@noahyu/eslint-config-vue'
+
+export default [
+  ...noahyuConfig,
+  // anything from here will override noahyuConfig
+  {
+    rules: {
+      // ···
+    },
+  },
+]
 ```
 
 ### NextJS
@@ -36,12 +42,18 @@ pnpm add @noahyu/eslint-config-nest
 ```
 
 ```js
-// .eslintrc.js
-module.exports = {
-  root: true,
-  extends: ['@noahyu/nest'],
-  // ···
-}
+// eslint.config.mjs
+import noahyuConfig from '@noahyu/eslint-config-nest'
+
+export default [
+  ...noahyuConfig,
+  // anything from here will override noahyuConfig
+  {
+    rules: {
+      // ···
+    },
+  },
+]
 ```
 
 ## License

@@ -11,12 +11,18 @@ pnpm add @noahyu/eslint-config-vue
 ## Quick start
 
 ```js
-// .eslintrc.js
-module.exports = {
-  root: true,
-  extends: ['@noahyu/vue'],
-  // ···
-}
+// eslint.config.mjs
+import noahyuConfig from '@noahyu/eslint-config-vue'
+
+export default [
+  ...noahyuConfig,
+  // anything from here will override noahyuConfig
+  {
+    rules: {
+      // ···
+    },
+  },
+]
 ```
 
 ## License

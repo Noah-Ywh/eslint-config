@@ -1,6 +1,6 @@
 // commitlint.config.js
 /** @type {import('cz-git').UserConfig} */
-module.exports = {
+const Configuration = {
   extends: ['@commitlint/config-conventional'],
   rules: {
     'type-enum': [
@@ -153,3 +153,5 @@ module.exports = {
     defaultSubject: '',
   },
 }
+
+export default Configuration

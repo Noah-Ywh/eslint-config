@@ -8,7 +8,7 @@
     "changelogs": "pnpm -r --parallel changelog && pnpm prettier",
     "changelog": "conventional-changelog -n './changelog.config.js' -i CHANGELOG.md -s -r 0 -k ./packages/eslint-config-vue/package.json --commit-path ./",
     "prettier": "prettier --config .prettierrc --write ./**/*.md",
-    "lint": "eslint . --ext .ts --fix",
+    "lint": "eslint",
     "prepare": "husky install"
   },
   "keywords": [
@@ -27,26 +27,27 @@
     "pnpm": ">=8.0.0"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.1",
-    "@commitlint/cli": "^19.2.1",
-    "@commitlint/config-conventional": "^19.1.0",
-    "@types/eslint": "^8.56.7",
+    "@changesets/cli": "^2.27.7",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@eslint/js": "^9.6.0",
+    "@types/eslint": "^8.56.10",
     "@types/estree": "^1.0.5",
-    "@types/node": "^20.12.4",
-    "@typescript-eslint/eslint-plugin": "^7.5.0",
-    "@typescript-eslint/parser": "^7.5.0",
+    "@types/node": "^20.14.9",
+    "@typescript-eslint/eslint-plugin": "^8.0.0-alpha.40",
+    "@typescript-eslint/parser": "^8.0.0-alpha.40",
     "commitizen": "^4.3.0",
     "compare-func": "^2.0.0",
-    "conventional-changelog-angular": "^7.0.0",
-    "conventional-changelog-cli": "^4.1.0",
-    "cz-git": "^1.9.1",
-    "eslint": "^8.57.0",
+    "conventional-changelog-angular": "^8.0.0",
+    "conventional-changelog-cli": "^5.0.0",
+    "cz-git": "^1.9.3",
+    "eslint": "^9.6.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.3"
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.3"
   },
   "lint-staged": {
     "*.ts": "eslint --fix"

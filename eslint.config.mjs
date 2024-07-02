@@ -6,15 +6,18 @@ import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin'
 import eslintPluginPrettier from 'eslint-plugin-prettier'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
-import eslintPluginVue from 'eslint-plugin-vue'
-
 export default [
+  /** 全局忽略 */
+  {
+    ignores: ['changelog.config.js', 'commitlint.config.mjs', '**/dist/'],
+  },
+
   /** eslint 默认规则 */
   eslintJS.configs.recommended,
 
   /** @typescript-eslint 规则 */
   {
-    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
+    files: ['**/*.ts'],
     languageOptions: {
       ecmaVersion: 'latest',
       parser: typescriptEslintParser,
@@ -23,9 +26,6 @@ export default [
     plugins: { '@typescript-eslint': typescriptEslintPlugin },
     rules: typescriptEslintPlugin.configs.recommended.rules,
   },
-
-  /** vue3 规则 */
-  ...eslintPluginVue.configs['flat/recommended'],
 
   /** prettier 默认规则 */
   {
@@ -74,23 +74,6 @@ export default [
       'no-undef': 'off', // ts(2304) & ts(2552)
       'no-unreachable': 'off', // ts(7027)
       'no-unsafe-negation': 'off', // ts(2365) & ts(2322) & ts(2358)
-
-      'vue/html-self-closing': [
-        'error',
-        {
-          html: {
-            void: 'always',
-            normal: 'never',
-            component: 'always',
-          },
-          svg: 'always',
-          math: 'always',
-        },
-      ],
-      'vue/max-attributes-per-line': 'off',
-      'vue/singleline-html-element-content-newline': 'off',
-      'vue/no-v-html': 'off',
-      'vue/multi-word-component-names': 'off',
     },
   },
 ]

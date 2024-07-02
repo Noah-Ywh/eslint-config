@@ -2,7 +2,7 @@
   "compilerOptions": {
     /* 基本选项 */
     "target": "ESNext", // 指定 ECMAScript 目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'
-    "module": "commonjs", // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
+    "module": "ESNext", // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
     "lib": ["ESNext"], // 指定要包含在编译中的库文件
     "composite": false, // 当前项目是否为子项目
     // "allowJs": true, // 允许编译 javascript 文件
@@ -54,8 +54,8 @@
     // "emitDecoratorMetadata": true // 为装饰器提供元数据的支持
   },
   /* 指定编译文件或排除指定编译文件 */
-  "include": ["src"],
-  "exclude": ["node_modules", "__tests__/**/*"]
+  "include": ["./src/**/*"]
+  // "exclude": []
   // "files": ["index.ts", "test.ts"],
   // 从另一个配置文件里继承配置
   // "extends": "@tsconfig/recommended",
