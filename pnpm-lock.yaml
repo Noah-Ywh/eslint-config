@@ -20,6 +20,9 @@ importers:
       '@eslint/js':
         specifier: ^9.6.0
         version: 9.6.0
+      '@noahyu/conventional-changelog-base':
+        specifier: ^1.0.1
+        version: 1.0.1(conventional-changelog-cli@5.0.0(conventional-commits-filter@5.0.0))
       '@types/eslint':
         specifier: ^8.56.10
         version: 8.56.10
@@ -331,6 +334,12 @@ packages:
 
   '@manypkg/get-packages@1.1.3':
     resolution: {integrity: sha512-fo+QhuU3qE/2TQMQmbVMqaQ6EWbMhi4ABWP+O4AM1NqPBuy0OrApV5LO6BrrgnhtAHS2NH6RrVk9OL181tTi8A==}
+
+  '@noahyu/conventional-changelog-base@1.0.1':
+    resolution: {integrity: sha512-gpVDFJlQZjZAzlqLIPWK6NzTNKY0MhNZ3hAilI/s/Z2GKkD7ER+PP7Wz/xh3XzIQMd3zLFOSwBisJNMyrAMzaw==}
+    engines: {node: '>=20.0.0', pnpm: '>=9.0.0'}
+    peerDependencies:
+      conventional-changelog-cli: '>=5'
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2246,6 +2255,11 @@ snapshots:
       fs-extra: 8.1.0
       globby: 11.1.0
       read-yaml-file: 1.1.0
+
+  '@noahyu/conventional-changelog-base@1.0.1(conventional-changelog-cli@5.0.0(conventional-commits-filter@5.0.0))':
+    dependencies:
+      compare-func: 2.0.0
+      conventional-changelog-cli: 5.0.0(conventional-commits-filter@5.0.0)
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
