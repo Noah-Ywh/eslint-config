@@ -1,3 +1,16 @@
+# [1.4.0](https://github.com/Noah-Ywh/eslint-config/compare/v1.3.0...v1.4.0) (2024-07-03)
+
+### 🔨Code Refactoring
+
+- 更新至 eslint v9 ([0aa403b](https://github.com/Noah-Ywh/eslint-config/commit/0aa403bf7cb4ca1f707e6cdea8859000a40f5e85))
+
+### 🛠️Chore
+
+- 更新项目配置 ([d119bf5](https://github.com/Noah-Ywh/eslint-config/commit/d119bf5201f20df6c8d685032ae6672bbd4ec863))
+- 更新项目配置 ([7813b37](https://github.com/Noah-Ywh/eslint-config/commit/7813b370c28608f3f551f478b467561199efe91e))
+- 构建为 Node 模块 ([b8d361a](https://github.com/Noah-Ywh/eslint-config/commit/b8d361a0ff58ed24273b1b3b853b52fa387bde6b))
+- 限制 eslint 的最低版本 ([d8d30c2](https://github.com/Noah-Ywh/eslint-config/commit/d8d30c2ae3bc83ebc71a9c9d1ce13fac1b356135))
+
 # [1.3.0](https://github.com/Noah-Ywh/eslint-config/compare/v1.2.4...v1.3.0) (2024-4-4)
 
 ### ✨Features
