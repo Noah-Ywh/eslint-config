@@ -9,7 +9,7 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 export default [
   /** 全局忽略 */
   {
-    ignores: ['changelog.config.js', 'commitlint.config.mjs', '**/dist/'],
+    ignores: ['changelog.config.mjs', 'commitlint.config.js', '**/dist/'],
   },
 
   /** eslint 默认规则 */
