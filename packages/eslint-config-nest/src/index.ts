@@ -6,8 +6,7 @@ import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin'
 import eslintPluginPrettier from 'eslint-plugin-prettier'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const configs: any[] = [
+module.exports = [
   /** eslint 默认规则 */
   eslintJS.configs.recommended,
 
@@ -84,4 +83,4 @@ const configs: any[] = [
   },
 ]
 
-export default configs
+// module.exports = configs
