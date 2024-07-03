@@ -2,7 +2,7 @@
   "compilerOptions": {
     /* 基本选项 */
     "target": "ESNext", // 指定 ECMAScript 目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'
-    "module": "ESNext", // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
+    "module": "NodeNext", // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
     "lib": ["ESNext"], // 指定要包含在编译中的库文件
     "composite": false, // 当前项目是否为子项目
     // "allowJs": true, // 允许编译 javascript 文件
@@ -34,7 +34,7 @@
 
     /* 模块解析选项 */
     "resolveJsonModule": true, // 解析json模块
-    "moduleResolution": "Node", // 选择模块解析策略： 'node' (Node.js) or 'classic' (TypeScript pre-1.6)
+    "moduleResolution": "NodeNext", // 选择模块解析策略： 'node' (Node.js) or 'classic' (TypeScript pre-1.6)
     // "baseUrl": "./", // 用于解析非相对模块名称的基础目录
     // "paths": {}, // 模块名到基于 baseUrl 的路径映射的列表
     // "rootDirs": [], // 根文件夹列表，其组合内容表示项目运行时的结构内容
