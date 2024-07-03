@@ -1,4 +1,14 @@
-# [1.4.0](https://github.com/Noah-Ywh/eslint-config/compare/v1.3.0...v1.4.0) (2024-07-03)
+## [1.4.1](https://github.com/Noah-Ywh/eslint-config/compare/v1.4.0...v1.4.1) (2024-07-03)
+
+### 🐛Bug Fixes
+
+- 导出 node 模块，同时不再生成类型声明文件 ([3f36af0](https://github.com/Noah-Ywh/eslint-config/commit/3f36af05e286d8d30181ad88f24235e68397db4f))
+
+### 🛠️Chore
+
+- 更新配置 ([66870cc](https://github.com/Noah-Ywh/eslint-config/commit/66870cc58de9dd38379e6789d851d4bca3c31ae7))
+
+# [1.4.0](https://github.com/Noah-Ywh/eslint-config/compare/v1.3.0...v1.4.0) (2024-7-3)
 
 ### 🔨Code Refactoring
 
