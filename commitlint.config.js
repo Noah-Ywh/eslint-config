@@ -153,5 +153,4 @@ const Configuration = {
     defaultSubject: '',
   },
 }
-
-module.exports = Configuration
+export default Configuration
