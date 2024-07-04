@@ -1,34 +1,17 @@
 import eslintJS from '@eslint/js'
+import eslintTS from 'typescript-eslint'
 
-import typescriptEslintParser from '@typescript-eslint/parser'
-import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin'
-
-import eslintPluginPrettier from 'eslint-plugin-prettier'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
-module.exports = [
+export default [
   /** eslint 默认规则 */
   eslintJS.configs.recommended,
 
-  /** @typescript-eslint 规则 */
-  {
-    files: ['**/*.ts'],
-    languageOptions: {
-      ecmaVersion: 'latest',
-      parser: typescriptEslintParser,
-      sourceType: 'module',
-    },
-    plugins: { '@typescript-eslint': typescriptEslintPlugin },
-    rules: typescriptEslintPlugin.configs.recommended.rules,
-  },
+  /** typescript-eslint 规则 */
+  ...eslintTS.configs.recommended,
 
   /** prettier 默认规则 */
-  {
-    plugins: {
-      prettier: eslintPluginPrettier,
-    },
-    rules: eslintPluginPrettierRecommended.rules,
-  },
+  eslintPluginPrettierRecommended,
 
   /** 自定义规则 */
   {
@@ -82,5 +65,3 @@ module.exports = [
     },
   },
 ]
-
-// module.exports = configs
